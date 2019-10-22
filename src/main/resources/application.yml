@@ -1,0 +1,25 @@
+server:
+  port: 8099
+
+spring:
+  profiles:
+    active: pro
+  mvc:
+    date-format: yyyy-MM-dd
+  datasource:
+    url: jdbc:mysql://localhost:3306/java1907?useUnicode=true&characterEncoding=utf-8&serverTimezone=UTC
+    username: root
+    password: 123456
+    driver-class-name: com.mysql.cj.jdbc.Driver
+  thymeleaf:
+    cache: false
+
+mybatis:
+  mapper-locations: classpath:/mapper/*.xml
+  configuration:
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+#logging:
+  #level:
+  #  root: info
+  #file: d://all.log
